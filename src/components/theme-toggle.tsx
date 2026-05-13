@@ -6,12 +6,14 @@ import { useTheme } from "next-themes"
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = React.useState(false)
-
-  // Avoid hydration mismatch
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
+  
+  // Use useSyncExternalStore to avoid hydration mismatch without using useEffect(setMounted)
+  // this satisfies strict React 19 linting rules regarding cascading renders.
+  const mounted = React.useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  )
 
   if (!mounted) return <div className="w-9 h-9" />
 
