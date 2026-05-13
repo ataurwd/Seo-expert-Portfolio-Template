@@ -32,7 +32,7 @@ export function Testimonials() {
         <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-4">Testimonials</h2>
         <h3 className="text-4xl md:text-5xl font-bold mb-6">What Our Clients Say</h3>
         <p className="text-lg text-muted-foreground">
-          Don't just take our word for it. Hear from the businesses we've helped scale.
+          Don&apos;t just take our word for it. Hear from the businesses we&apos;ve helped scale.
         </p>
       </div>
 
@@ -53,7 +53,7 @@ export function Testimonials() {
               ))}
             </div>
             <p className="text-lg mb-8 flex-1 leading-relaxed italic text-foreground/90">
-              "{t.text}"
+              &quot;{t.text}&quot;
             </p>
             <div>
               <p className="font-bold">{t.name}</p>

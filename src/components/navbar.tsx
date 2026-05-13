@@ -3,7 +3,6 @@
 import * as React from "react"
 import Link from "next/link"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 
 const navItems = [
@@ -37,7 +36,7 @@ export function Navbar() {
       style={{ backgroundColor, backdropFilter }}
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/0 px-6"
     >
-      <div className="max-w-[1200px] px-6 mx-auto py-4 flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="text-xl font-bold tracking-tighter">
             SEO<span className="text-accent">EXPERT</span>

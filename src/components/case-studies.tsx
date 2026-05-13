@@ -2,7 +2,6 @@
 
 import { Section } from "./section"
 import { motion } from "framer-motion"
-import Image from "next/image"
 import { ArrowUpRight, TrendingUp, Users, DollarSign } from "lucide-react"
 
 const cases = [

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, BarChart3, TrendingUp, Globe } from "lucide-react"
+import { ArrowRight, TrendingUp, Globe } from "lucide-react"
 
 export function Hero() {
   return (

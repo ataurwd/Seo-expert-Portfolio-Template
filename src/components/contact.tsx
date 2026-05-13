@@ -2,7 +2,7 @@
 
 import { Section } from "./section"
 import { motion } from "framer-motion"
-import { Send, Mail, Phone, MapPin, Calendar } from "lucide-react"
+import { Send, Mail, Calendar } from "lucide-react"
 
 export function Contact() {
   return (
@@ -17,7 +17,7 @@ export function Contact() {
           <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-4">Get In Touch</h2>
           <h3 className="text-4xl md:text-5xl font-bold mb-8">Ready to Scale Your Organic Growth?</h3>
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-            Stop guessing and start growing. Book your free strategy call today and let's discuss how we can dominate your niche together.
+            Stop guessing and start growing. Book your free strategy call today and let&apos;s discuss how we can dominate your niche together.
           </p>
 
           <div className="space-y-6">

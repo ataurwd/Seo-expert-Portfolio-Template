@@ -1,7 +1,7 @@
 "use client"
 
 import { Section } from "./section"
-import { motion, useScroll, useTransform, useSpring } from "framer-motion"
+import { motion } from "framer-motion"
 import * as React from "react"
 
 const stats = [
@@ -10,6 +10,12 @@ const stats = [
   { label: "Clients Ranked", value: "50+", sub: "Top 3 positions" },
   { label: "Organic Impressions", value: "10M+", sub: "Generated monthly" },
 ]
+
+// Fixed values to avoid Math.random() in render for purity
+const chartHeights = [
+  40, 60, 45, 70, 55, 90, 80, 100, 85, 95, 110, 130, 
+  50, 75, 60, 85, 70, 105, 95, 115, 100, 120, 105, 125
+];
 
 export function Stats() {
   return (
@@ -50,7 +56,7 @@ export function Stats() {
             <motion.div
               key={i}
               initial={{ height: 0 }}
-              whileInView={{ height: `${20 + Math.random() * 80}%` }}
+              whileInView={{ height: `${chartHeights[i] % 100}%` }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: i * 0.05 }}
               className="flex-1 bg-linear-to-t from-accent/40 to-accent rounded-t-lg"

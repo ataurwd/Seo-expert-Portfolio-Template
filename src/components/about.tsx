@@ -2,7 +2,7 @@
 
 import { Section } from "./section"
 import { motion } from "framer-motion"
-import { Award, Briefcase, Zap, CheckCircle2 } from "lucide-react"
+import { Award, CheckCircle2 } from "lucide-react"
 
 const skills = [
   { name: "Strategic SEO Planning", level: 95 },
@@ -40,7 +40,7 @@ export function About() {
           <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-4">About Me</h2>
           <h3 className="text-4xl md:text-5xl font-bold mb-8">Data-Driven Growth is My Obsession</h3>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            With over 8 years of experience in the search engine landscape, I've helped brands from Silicon Valley startups to global ecommerce giants achieve unprecedented organic growth.
+            With over 8 years of experience in the search engine landscape, I&apos;ve helped brands from Silicon Valley startups to global ecommerce giants achieve unprecedented organic growth.
           </p>
           
           <div className="space-y-6 mb-12">
