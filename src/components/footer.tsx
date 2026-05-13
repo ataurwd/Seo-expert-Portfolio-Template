@@ -4,7 +4,7 @@ import { X, Briefcase, Camera, ArrowRight } from "lucide-react"
 export function Footer() {
   return (
     <footer className="bg-background border-t border-border pt-20 pb-10 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-1">
           <Link href="/" className="text-2xl font-bold tracking-tighter mb-4 block">
             SEO<span className="text-accent">EXPERT</span>
@@ -55,7 +55,7 @@ export function Footer() {
         </div>
       </div>
       
-      <div className="max-w-7xl mx-auto mt-20 pt-8 border-t border-border flex flex-col md:row justify-between items-center gap-4 text-sm text-muted-foreground">
+      <div className="max-w-[1200px] mx-auto mt-20 pt-8 border-t border-border flex flex-col md:row justify-between items-center gap-4 text-sm text-muted-foreground">
         <p>© 2026 SEO EXPERT. All rights reserved.</p>
         <div className="flex gap-8">
           <Link href="#">Sitemap</Link>

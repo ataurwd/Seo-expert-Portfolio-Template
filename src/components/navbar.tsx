@@ -35,37 +35,39 @@ export function Navbar() {
   return (
     <motion.header
       style={{ backgroundColor, backdropFilter }}
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 transition-all duration-300 border-b border-white/0"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/0 px-6"
     >
-      <div className="flex items-center gap-2">
-        <Link href="/" className="text-xl font-bold tracking-tighter">
-          SEO<span className="text-accent">EXPERT</span>
-        </Link>
-      </div>
-
-      {/* Desktop Nav */}
-      <nav className="hidden md:flex items-center gap-8">
-        {navItems.map((item) => (
-          <Link
-            key={item.name}
-            href={item.href}
-            className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors"
-          >
-            {item.name}
+      <div className="max-w-[1200px] px-6 mx-auto py-4 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <Link href="/" className="text-xl font-bold tracking-tighter">
+            SEO<span className="text-accent">EXPERT</span>
           </Link>
-        ))}
-        <button className="px-5 py-2 bg-accent text-accent-foreground rounded-full text-sm font-bold hover:scale-105 transition-transform active:scale-95">
-          Book Free SEO Audit
-        </button>
-      </nav>
+        </div>
 
-      {/* Mobile Toggle */}
-      <button 
-        className="md:hidden p-2"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        {isOpen ? <X /> : <Menu />}
-      </button>
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-sm font-medium text-foreground/80 hover:text-accent transition-colors"
+            >
+              {item.name}
+            </Link>
+          ))}
+          <button className="px-5 py-2 bg-accent text-accent-foreground rounded-full text-sm font-bold hover:scale-105 transition-transform active:scale-95">
+            Book Free SEO Audit
+          </button>
+        </nav>
+
+        {/* Mobile Toggle */}
+        <button 
+          className="md:hidden p-2"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X /> : <Menu />}
+        </button>
+      </div>
 
       {/* Mobile Menu */}
       {isOpen && (

@@ -21,7 +21,7 @@ export function Section({ children, className, id, ...props }: SectionProps) {
       className={cn("py-24 px-6 relative overflow-hidden", className)}
       {...props}
     >
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-[1200px] mx-auto relative z-10">
         {children}
       </div>
     </motion.section>
