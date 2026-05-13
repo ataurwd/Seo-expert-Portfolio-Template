@@ -32,7 +32,7 @@ const cases = [
 export function CaseStudies() {
   return (
     <Section id="case-studies">
-      <div className="flex flex-col md:row justify-between items-end mb-16 gap-6">
+      <div className="flex flex-col md:row justify-between lg:pl-12 mb-16 gap-6">
         <div className="max-w-2xl">
           <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-4">Case Studies</h2>
           <h3 className="text-4xl md:text-5xl font-bold">Real Results for Real Businesses</h3>
