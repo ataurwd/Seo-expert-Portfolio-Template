@@ -2,9 +2,10 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { motion, useScroll, useTransform } from "framer-motion"
+import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { ThemeToggle } from "./theme-toggle"
+import { cn } from "@/lib/utils"
 
 const navItems = [
   { name: "Home", href: "#home" },
@@ -18,12 +19,21 @@ const navItems = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
+  const [isScrolled, setIsScrolled] = React.useState(false)
   const { scrollY } = useScroll()
   
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    if (latest > 50) {
+      setIsScrolled(true)
+    } else {
+      setIsScrolled(false)
+    }
+  })
+
   const backgroundColor = useTransform(
     scrollY,
     [0, 50],
-    ["rgba(10, 10, 10, 0)", "rgba(10, 10, 10, 0.8)"]
+    ["rgba(10, 10, 10, 0)", "rgba(10, 10, 10, 0.9)"]
   )
   
   const backdropFilter = useTransform(
@@ -32,14 +42,19 @@ export function Navbar() {
     ["blur(0px)", "blur(12px)"]
   )
 
+  const textColor = isScrolled ? "text-white" : "text-foreground"
+
   return (
     <motion.header
       style={{ backgroundColor, backdropFilter }}
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-white/0 px-6"
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6",
+        isScrolled ? "border-b border-white/10" : "border-b border-transparent"
+      )}
     >
       <div className="max-w-[1200px] mx-auto py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <Link href="/" className="text-xl font-bold tracking-tighter">
+          <Link href="/" className={cn("text-xl font-bold tracking-tighter transition-colors", textColor)}>
             SEO<span className="text-primary">EXPERT</span>
           </Link>
         </div>
@@ -50,14 +65,17 @@ export function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                isScrolled ? "text-white/80" : "text-foreground/80"
+              )}
             >
               {item.name}
             </Link>
           ))}
           <div className="flex items-center gap-4">
             <ThemeToggle />
-            <button className="px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-bold hover:scale-105 transition-transform active:scale-95">
+            <button className="px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-bold hover:scale-105 transition-transform active:scale-95 shadow-[0_0_15px_rgba(99,103,255,0.3)]">
               Book Free SEO Audit
             </button>
           </div>
@@ -67,7 +85,7 @@ export function Navbar() {
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
           <button 
-            className="p-2"
+            className={cn("p-2 transition-colors", textColor)}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X /> : <Menu />}
