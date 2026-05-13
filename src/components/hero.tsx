@@ -8,8 +8,8 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-background">
       {/* Background Decorative Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[10%] left-[10%] w-[40rem] h-[40rem] bg-accent/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[10%] right-[10%] w-[30rem] h-[30rem] bg-purple-500/10 rounded-full blur-[100px]" />
+        <div className="absolute top-[10%] left-[10%] w-[40rem] h-[40rem] bg-primary/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[10%] right-[10%] w-[30rem] h-[30rem] bg-highlight/20 rounded-full blur-[100px]" />
       </div>
 
       <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -18,10 +18,10 @@ export function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-xs font-bold text-accent mb-6 border border-white/5">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-xs font-bold text-primary mb-6 border border-primary/10">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
             NOW ACCEPTING NEW CLIENTS
           </div>
@@ -36,10 +36,10 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:row gap-4">
-            <button className="px-8 py-4 bg-accent text-accent-foreground rounded-xl font-bold flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all">
+            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-xl font-bold flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(99,103,255,0.4)] transition-all">
               Get Free SEO Audit <ArrowRight size={18} />
             </button>
-            <button className="px-8 py-4 bg-secondary text-foreground rounded-xl font-bold border border-white/5 hover:bg-secondary/80 transition-all text-center">
+            <button className="px-8 py-4 bg-secondary text-foreground rounded-xl font-bold border border-border hover:bg-secondary/80 transition-all text-center">
               View Case Studies
             </button>
           </div>
@@ -73,32 +73,32 @@ export function Hero() {
                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
                 <div className="w-3 h-3 rounded-full bg-green-500" />
               </div>
-              <div className="bg-white/5 px-4 py-1 rounded-lg text-[10px] text-muted-foreground uppercase tracking-widest font-bold">
+              <div className="bg-primary/5 px-4 py-1 rounded-lg text-[10px] text-muted-foreground uppercase tracking-widest font-bold">
                 Organic Traffic Analysis
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-8">
-              <div className="p-4 bg-white/5 rounded-2xl border border-white/5">
+              <div className="p-4 bg-secondary rounded-2xl border border-border">
                 <p className="text-[10px] text-muted-foreground uppercase font-bold mb-1">Total Impressions</p>
                 <h3 className="text-2xl font-bold">4.2M</h3>
-                <p className="text-[10px] text-green-400 font-bold">+124.5%</p>
+                <p className="text-[10px] text-green-500 font-bold">+124.5%</p>
               </div>
-              <div className="p-4 bg-white/5 rounded-2xl border border-white/5">
+              <div className="p-4 bg-secondary rounded-2xl border border-border">
                 <p className="text-[10px] text-muted-foreground uppercase font-bold mb-1">Total Clicks</p>
                 <h3 className="text-2xl font-bold">185K</h3>
-                <p className="text-[10px] text-green-400 font-bold">+86.2%</p>
+                <p className="text-[10px] text-green-500 font-bold">+86.2%</p>
               </div>
             </div>
 
-            <div className="h-48 w-full bg-white/5 rounded-2xl border border-white/5 flex items-end p-4 gap-2">
+            <div className="h-48 w-full bg-secondary rounded-2xl border border-border flex items-end p-4 gap-2">
               {[40, 60, 45, 70, 55, 90, 80, 100, 85, 95, 110, 130].map((h, i) => (
                 <motion.div 
                   key={i}
                   initial={{ height: 0 }}
                   animate={{ height: `${h}%` }}
                   transition={{ duration: 1, delay: 1 + i * 0.05 }}
-                  className="flex-1 bg-accent/40 rounded-t-sm" 
+                  className="flex-1 bg-primary/40 rounded-t-sm" 
                 />
               ))}
             </div>
@@ -107,15 +107,15 @@ export function Hero() {
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-10 -right-10 glass p-4 rounded-2xl border border-white/10 shadow-xl"
+              className="absolute -top-10 -right-10 glass p-4 rounded-2xl border border-border shadow-xl"
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-green-500/20 text-green-500 rounded-lg">
+                <div className="p-2 bg-green-500/10 text-green-500 rounded-lg">
                   <TrendingUp size={20} />
                 </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase text-muted-foreground">Domain Rating</p>
-                  <p className="text-lg font-bold">78 <span className="text-[10px] text-green-500">+12</span></p>
+                  <p className="text-lg font-bold text-primary">78 <span className="text-[10px] text-green-500">+12</span></p>
                 </div>
               </div>
             </motion.div>
@@ -123,15 +123,15 @@ export function Hero() {
             <motion.div 
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="absolute -bottom-10 -left-10 glass p-4 rounded-2xl border border-white/10 shadow-xl"
+              className="absolute -bottom-10 -left-10 glass p-4 rounded-2xl border border-border shadow-xl"
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 bg-accent/20 text-accent rounded-lg">
+                <div className="p-2 bg-accent/10 text-accent rounded-lg">
                   <Globe size={20} />
                 </div>
                 <div>
                   <p className="text-[10px] font-bold uppercase text-muted-foreground">Keywords Ranked</p>
-                  <p className="text-lg font-bold">12,450</p>
+                  <p className="text-lg font-bold text-primary">12,450</p>
                 </div>
               </div>
             </motion.div>

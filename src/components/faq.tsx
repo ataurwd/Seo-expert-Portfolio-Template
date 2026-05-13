@@ -32,13 +32,13 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
   const [isOpen, setIsOpen] = React.useState(false)
 
   return (
-    <div className="border-b border-white/5 py-6">
+    <div className="border-b border-border py-6">
       <button 
         className="w-full flex items-center justify-between text-left group"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="text-xl font-bold group-hover:text-accent transition-colors">{question}</span>
-        <div className={`p-2 rounded-full ${isOpen ? 'bg-accent text-accent-foreground' : 'bg-secondary'} transition-colors`}>
+        <span className="text-xl font-bold group-hover:text-primary transition-colors">{question}</span>
+        <div className={`p-2 rounded-full ${isOpen ? 'bg-primary text-primary-foreground' : 'bg-secondary'} transition-colors`}>
           {isOpen ? <Minus size={20} /> : <Plus size={20} />}
         </div>
       </button>
@@ -66,7 +66,7 @@ export function FAQ() {
     <Section id="faq">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-sm font-bold text-accent tracking-widest uppercase mb-4">FAQ</h2>
+          <h2 className="text-sm font-bold text-primary tracking-widest uppercase mb-4">FAQ</h2>
           <h3 className="text-4xl md:text-5xl font-bold mb-6">Common Questions</h3>
         </div>
         

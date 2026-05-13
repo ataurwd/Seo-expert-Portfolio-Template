@@ -30,7 +30,7 @@ export function Stats() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="text-center"
           >
-            <h4 className="text-4xl md:text-6xl font-extrabold text-accent mb-2 tracking-tighter">
+            <h4 className="text-4xl md:text-6xl font-extrabold text-primary mb-2 tracking-tighter">
               {stat.value}
             </h4>
             <p className="text-lg font-bold mb-1">{stat.label}</p>
@@ -40,13 +40,13 @@ export function Stats() {
       </div>
 
       {/* Mini Chart Visualization */}
-      <div className="mt-24 p-8 glass rounded-[2.5rem] border border-white/5 relative overflow-hidden">
+      <div className="mt-24 p-8 glass rounded-[2.5rem] border border-border relative overflow-hidden">
         <div className="flex flex-col md:row items-center justify-between mb-12 gap-6">
           <div>
             <h3 className="text-2xl font-bold mb-2">Proven Performance Track Record</h3>
             <p className="text-muted-foreground">Consistently delivering ROI through strategic search engine dominance.</p>
           </div>
-          <button className="px-6 py-3 bg-white text-black rounded-xl font-bold hover:bg-white/90 transition-all">
+          <button className="px-6 py-3 bg-primary text-primary-foreground rounded-xl font-bold hover:opacity-90 transition-all">
             Download Case Studies
           </button>
         </div>
@@ -59,7 +59,7 @@ export function Stats() {
               whileInView={{ height: `${chartHeights[i] % 100}%` }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: i * 0.05 }}
-              className="flex-1 bg-linear-to-t from-accent/40 to-accent rounded-t-lg"
+              className="flex-1 bg-linear-to-t from-primary/40 to-primary rounded-t-lg"
             />
           ))}
         </div>
