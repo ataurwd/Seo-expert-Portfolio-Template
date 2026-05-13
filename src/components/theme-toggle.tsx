@@ -3,12 +3,11 @@
 import * as React from "react"
 import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
+import { cn } from "@/lib/utils"
 
-export function ThemeToggle() {
+export function ThemeToggle({ className }: { className?: string }) {
   const { theme, setTheme } = useTheme()
   
-  // Use useSyncExternalStore to avoid hydration mismatch without using useEffect(setMounted)
-  // this satisfies strict React 19 linting rules regarding cascading renders.
   const mounted = React.useSyncExternalStore(
     () => () => {},
     () => true,
@@ -20,7 +19,10 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="p-2 rounded-xl bg-secondary hover:bg-secondary/80 transition-colors text-foreground"
+      className={cn(
+        "p-2 rounded-xl bg-secondary hover:bg-secondary/80 transition-colors text-foreground",
+        className
+      )}
       aria-label="Toggle theme"
     >
       {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}

@@ -23,26 +23,24 @@ export function Navbar() {
   const { scrollY } = useScroll()
   
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (latest > 50) {
-      setIsScrolled(true)
-    } else {
-      setIsScrolled(false)
-    }
+    setIsScrolled(latest > 50)
   })
 
+  // We keep a dark sticky background for both modes for a premium glass effect
   const backgroundColor = useTransform(
     scrollY,
     [0, 50],
-    ["rgba(10, 10, 10, 0)", "rgba(10, 10, 10, 0.9)"]
+    ["rgba(10, 10, 10, 0)", "rgba(10, 10, 10, 0.95)"]
   )
   
   const backdropFilter = useTransform(
     scrollY,
     [0, 50],
-    ["blur(0px)", "blur(12px)"]
+    ["blur(0px)", "blur(16px)"]
   )
 
   const textColor = isScrolled ? "text-white" : "text-foreground"
+  const itemColor = isScrolled ? "text-white/80" : "text-foreground/80"
 
   return (
     <motion.header
@@ -67,14 +65,14 @@ export function Navbar() {
               href={item.href}
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
-                isScrolled ? "text-white/80" : "text-foreground/80"
+                itemColor
               )}
             >
               {item.name}
             </Link>
           ))}
           <div className="flex items-center gap-4">
-            <ThemeToggle />
+            <ThemeToggle className={cn(isScrolled && "text-white bg-white/10 hover:bg-white/20 border-transparent")} />
             <button className="px-5 py-2 bg-primary text-primary-foreground rounded-full text-sm font-bold hover:scale-105 transition-transform active:scale-95 shadow-[0_0_15px_rgba(99,103,255,0.3)]">
               Book Free SEO Audit
             </button>
@@ -83,12 +81,12 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle />
+          <ThemeToggle className={cn(isScrolled && "text-white bg-white/10 hover:bg-white/20 border-transparent")} />
           <button 
             className={cn("p-2 transition-colors", textColor)}
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X /> : <Menu />}
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
