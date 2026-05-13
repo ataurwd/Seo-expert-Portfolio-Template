@@ -15,12 +15,12 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <Navbar />
       <Hero />
+      <About />
       <Services />
       <Stats />
       <CaseStudies />
       <Process />
       <Testimonials />
-      <About />
       <FAQ />
       <Contact />
       <Footer />
