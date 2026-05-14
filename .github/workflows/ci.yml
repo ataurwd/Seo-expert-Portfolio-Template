@@ -14,24 +14,25 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install Dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Linting
-        run: npm run lint
+        run: pnpm run lint
 
       - name: Type Checking
         run: npx tsc --noEmit
 
       - name: Production Build
-        run: npm run build
-
-  # Optional: Deployment Step
-  # If you use Vercel, it connects automatically via their GitHub integration.
-  # If you want to deploy to GitHub Pages or another service, we can add that here.
+        run: pnpm run build
