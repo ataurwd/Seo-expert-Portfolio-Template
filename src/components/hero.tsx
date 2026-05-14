@@ -23,16 +23,16 @@ export function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            NOW ACCEPTING NEW CLIENTS
+            4+ YEARS OF SEO EXPERTISE
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
-            Rank Higher. <br />
-            <span className="gradient-text">Dominate Search.</span>
+            Boost Your <br />
+            <span className="gradient-text">Visibility.</span>
           </h1>
           
           <p className="text-xl text-muted-foreground mb-10 max-w-lg leading-relaxed">
-            I help high-growth brands increase organic traffic, leads, and revenue through data-driven SEO strategies and technical excellence.
+            Welcome to Dipto Das SEO. I specialize in boosting your website’s visibility and driving organic traffic with measurable results.
           </p>
 
           <div className="flex flex-col sm:row gap-4">
@@ -42,20 +42,6 @@ export function Hero() {
             <button className="px-8 py-4 bg-secondary text-foreground rounded-xl font-bold border border-border hover:bg-secondary/80 transition-all text-center">
               View Case Studies
             </button>
-          </div>
-
-          <div className="mt-12 flex items-center gap-8">
-            <div className="flex -space-x-3">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-10 h-10 rounded-full border-2 border-background bg-secondary flex items-center justify-center text-[10px] font-bold">
-                  {i === 4 ? "50+" : ""}
-                </div>
-              ))}
-            </div>
-            <div className="text-sm">
-              <p className="font-bold">Trusted by 50+ Brands</p>
-              <p className="text-muted-foreground">Across 12+ Industries</p>
-            </div>
           </div>
         </motion.div>
 

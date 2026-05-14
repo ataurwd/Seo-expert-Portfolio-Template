@@ -9,7 +9,7 @@ const skills = [
   { name: "Strategic SEO Planning", level: 95 },
   { name: "Technical SEO Auditing", level: 98 },
   { name: "High-Authority Link Building", level: 90 },
-  { name: "Data Analysis (GA4/GSC)", level: 92 },
+  { name: "Local SEO Mastery", level: 92 },
 ]
 
 export function About() {
@@ -26,7 +26,7 @@ export function About() {
           <div className="aspect-square rounded-[3rem] overflow-hidden bg-primary/10 border border-primary/20 relative group">
             <Image 
               src="https://i.ibb.co/xt1LW3n4/692811295-875727162200008-419341580165902744-n.jpg"
-              alt="SEO Expert & Developer"
+              alt="Dipto Das - SEO Expert"
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-110"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -37,16 +37,19 @@ export function About() {
           
           <div className="absolute -bottom-10 -right-10 glass p-6 rounded-3xl border border-white/10 shadow-2xl hidden md:block max-w-[200px] z-20">
             <Award className="text-primary mb-3" size={32} />
-            <p className="font-bold text-sm">Top Rated SEO Strategist</p>
-            <p className="text-[10px] text-muted-foreground uppercase font-bold mt-1">Certified by Google & HubSpot</p>
+            <p className="font-bold text-sm">Top Rated SEO Expert</p>
+            <p className="text-[10px] text-muted-foreground uppercase font-bold mt-1">4+ Years of Industry Experience</p>
           </div>
         </motion.div>
 
         <div>
           <h2 className="text-sm font-bold text-primary tracking-widest uppercase mb-4">About Me</h2>
-          <h3 className="text-4xl md:text-5xl font-bold mb-8">Data-Driven Growth is My Obsession</h3>
+          <h3 className="text-4xl md:text-5xl font-bold mb-8">Delivering Long-Term Results Through Data</h3>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-            With over 8 years of experience in the search engine landscape, I&apos;ve helped brands from Silicon Valley startups to global ecommerce giants achieve unprecedented organic growth.
+            I am Dipto Das, an SEO expert with over 4 years of experience in optimizing websites across various industries. From e-commerce to law firms, I have helped businesses improve their online visibility and drive organic traffic.
+          </p>
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            My focus is always on delivering long-term results through a combination of on-page, off-page, and technical SEO strategies.
           </p>
           
           <div className="space-y-6 mb-12">
@@ -80,7 +83,7 @@ export function About() {
               <CheckCircle2 className="text-primary" size={18} /> Screaming Frog
             </div>
             <div className="flex items-center gap-2 text-sm font-bold">
-              <CheckCircle2 className="text-primary" size={18} /> Data Studio / GA4
+              <CheckCircle2 className="text-primary" size={18} /> GMB Optimization
             </div>
           </div>
         </div>

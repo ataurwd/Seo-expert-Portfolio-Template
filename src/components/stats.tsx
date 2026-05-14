@@ -5,10 +5,10 @@ import { motion } from "framer-motion"
 import * as React from "react"
 
 const stats = [
-  { label: "Traffic Growth", value: "300%", sub: "Average for clients" },
-  { label: "Projects Completed", value: "120+", sub: "Successful deliveries" },
-  { label: "Clients Ranked", value: "50+", sub: "Top 3 positions" },
-  { label: "Organic Impressions", value: "10M+", sub: "Generated monthly" },
+  { label: "Traffic Growth", value: "40%+", sub: "In just 3 months" },
+  { label: "Projects Completed", value: "100+", sub: "Proven track record" },
+  { label: "Rankings", value: "#1", sub: "For local keywords" },
+  { label: "Bounce Rate", value: "-25%", sub: "Improved UX performance" },
 ]
 
 // Fixed values to avoid Math.random() in render for purity
@@ -20,6 +20,14 @@ const chartHeights = [
 export function Stats() {
   return (
     <Section id="results" className="bg-background relative">
+      <div className="text-center max-w-3xl mx-auto mb-16">
+        <h2 className="text-sm font-bold text-primary tracking-widest uppercase mb-4">Our Results</h2>
+        <h3 className="text-4xl md:text-5xl font-bold mb-6">Transparency & Measurable Success</h3>
+        <p className="text-lg text-muted-foreground">
+          Over the years, we’ve delivered significant improvements in website rankings, traffic, and conversions for our clients.
+        </p>
+      </div>
+
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
         {stats.map((stat, index) => (
           <motion.div
@@ -43,8 +51,8 @@ export function Stats() {
       <div className="mt-24 p-8 glass rounded-[2.5rem] border border-border relative overflow-hidden">
         <div className="flex flex-col md:row items-center justify-between mb-12 gap-6">
           <div>
-            <h3 className="text-2xl font-bold mb-2">Proven Performance Track Record</h3>
-            <p className="text-muted-foreground">Consistently delivering ROI through strategic search engine dominance.</p>
+            <h3 className="text-2xl font-bold mb-2">Proven SEO Performance</h3>
+            <p className="text-muted-foreground">Consistently delivering ROI through strategic search engine dominance and technical excellence.</p>
           </div>
           <button className="px-6 py-3 bg-primary text-primary-foreground rounded-xl font-bold hover:opacity-90 transition-all">
             Download Case Studies

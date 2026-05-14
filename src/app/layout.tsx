@@ -14,13 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SEO Expert & Growth Strategist | Rank Higher. Grow Faster.",
-  description: "High-converting SEO strategies to increase organic traffic, leads, and revenue. Expert SEO auditing, technical SEO, and data-driven growth.",
-  keywords: ["SEO Expert", "Digital Growth Strategist", "Organic Traffic", "SEO Audit", "Search Engine Optimization"],
-  authors: [{ name: "SEO Expert" }],
+  title: "Dipto Das SEO | Boost Your Website’s Visibility",
+  description: "Dipto Das is an SEO expert with over 4 years of experience specializing in on-page, off-page, and technical SEO to drive organic traffic.",
+  keywords: ["Dipto Das SEO", "SEO Expert", "Organic Traffic", "SEO Audit", "Search Engine Optimization"],
+  authors: [{ name: "Dipto Das" }],
   openGraph: {
-    title: "SEO Expert & Growth Strategist | Rank Higher. Grow Faster.",
-    description: "Data-driven SEO strategies for modern brands.",
+    title: "Dipto Das SEO | Expert Digital Growth Strategist",
+    description: "Measurable results and data-driven SEO strategies to help your business succeed.",
     type: "website",
   },
 };

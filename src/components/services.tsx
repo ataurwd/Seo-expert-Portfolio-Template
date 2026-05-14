@@ -3,63 +3,33 @@
 import { Section } from "./section"
 import { 
   Search, 
-  Code, 
+  Settings, 
   Link2, 
-  MapPin, 
-  ShoppingBag, 
-  FileText, 
-  Target, 
-  BarChart,
-  Video
+  MapPin
 } from "lucide-react"
 import { motion } from "framer-motion"
 
 const services = [
   {
-    title: "Technical SEO",
-    description: "Deep-dive audits and fixes for crawlability, indexing, and site speed optimization.",
-    icon: Code,
-  },
-  {
     title: "On-Page SEO",
-    description: "Semantic content optimization, keyword mapping, and perfect heading hierarchy.",
+    description: "Keyword optimization, meta tags, and high-quality content improvements to ensure your pages rank for the right terms.",
     icon: Search,
   },
   {
     title: "Off-Page SEO",
-    description: "High-authority link building and digital PR to boost your domain authority.",
+    description: "Authority-boosting link-building strategies, guest blogging, and strategic outreach to grow your domain's trust.",
     icon: Link2,
   },
   {
     title: "Local SEO",
-    description: "Dominate local map packs and attract nearby customers with localized strategies.",
+    description: "Improve your local rankings and visibility on Google Maps to attract nearby customers and grow your local presence.",
     icon: MapPin,
   },
   {
-    title: "Ecommerce SEO",
-    description: "Specialized strategies for Shopify, Magento, and WooCommerce stores to drive sales.",
-    icon: ShoppingBag,
-  },
-  {
-    title: "Content Strategy",
-    description: "Data-backed content roadmaps designed to capture high-intent organic traffic.",
-    icon: FileText,
-  },
-  {
-    title: "Keyword Research",
-    description: "Identifying high-volume, low-competition keywords your competitors missed.",
-    icon: Target,
-  },
-  {
-    title: "SEO Audits",
-    description: "Comprehensive 150+ point checkup of your website's search engine health.",
-    icon: BarChart,
-  },
-  {
-    title: "YouTube SEO",
-    description: "Optimizing video content to rank in both YouTube and Google search results.",
-    icon: Video,
-  },
+    title: "Technical SEO",
+    description: "Optimizing website speed, mobile-friendliness, and crawlability to provide a perfect foundation for search engine success.",
+    icon: Settings,
+  }
 ]
 
 export function Services() {
@@ -67,13 +37,13 @@ export function Services() {
     <Section id="services" className="bg-secondary/30">
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-sm font-bold text-primary tracking-widest uppercase mb-4">Our Expertise</h2>
-        <h3 className="text-4xl md:text-5xl font-bold mb-6">Comprehensive SEO Solutions</h3>
+        <h3 className="text-4xl md:text-5xl font-bold mb-6">Full Spectrum SEO Services</h3>
         <p className="text-lg text-muted-foreground">
-          We provide a full suite of SEO services designed to scale your organic presence and outperform the competition.
+          At Dipto Das SEO, we offer services tailored to meet your business’s unique needs and help you rank higher on search engines.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {services.map((service, index) => (
           <motion.div
             key={service.title}
