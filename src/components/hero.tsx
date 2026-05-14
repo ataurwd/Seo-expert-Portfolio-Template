@@ -32,7 +32,7 @@ export function Hero() {
           </h1>
           
           <p className="text-xl text-muted-foreground mb-10 max-w-lg leading-relaxed">
-            Welcome to Dipto Das SEO. I specialize in boosting your website’s visibility and driving organic traffic with measurable results.
+            Welcome to Dipto Das SEO. I specialize in boosting your website&apos;s visibility and driving organic traffic with measurable results.
           </p>
 
           <div className="flex flex-col sm:row gap-4">

@@ -17,7 +17,7 @@ const services = [
   },
   {
     title: "Off-Page SEO",
-    description: "Authority-boosting link-building strategies, guest blogging, and strategic outreach to grow your domain's trust.",
+    description: "Authority-boosting link-building strategies, guest blogging, and strategic outreach to grow your domain&apos;s trust.",
     icon: Link2,
   },
   {
@@ -39,7 +39,7 @@ export function Services() {
         <h2 className="text-sm font-bold text-primary tracking-widest uppercase mb-4">Our Expertise</h2>
         <h3 className="text-4xl md:text-5xl font-bold mb-6">Full Spectrum SEO Services</h3>
         <p className="text-lg text-muted-foreground">
-          At Dipto Das SEO, we offer services tailored to meet your business’s unique needs and help you rank higher on search engines.
+          At Dipto Das SEO, we offer services tailored to meet your business&apos;s unique needs and help you rank higher on search engines.
         </p>
       </div>
 

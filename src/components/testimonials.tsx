@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: "Senior Partner",
     role: "Law Firm",
-    text: "We’re now ranking at the top for our local services. Their local SEO strategy was exactly what we needed to grow our client base.",
+    text: "We&apos;re now ranking at the top for our local services. Their local SEO strategy was exactly what we needed to grow our client base.",
     stars: 5,
   },
   {

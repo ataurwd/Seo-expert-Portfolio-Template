@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Dipto Das SEO | Boost Your Website’s Visibility",
+  title: "Dipto Das SEO | Boost Your Website's Visibility",
   description: "Dipto Das is an SEO expert with over 4 years of experience specializing in on-page, off-page, and technical SEO to drive organic traffic.",
   keywords: ["Dipto Das SEO", "SEO Expert", "Organic Traffic", "SEO Audit", "Search Engine Optimization"],
   authors: [{ name: "Dipto Das" }],

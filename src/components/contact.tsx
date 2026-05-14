@@ -17,7 +17,7 @@ export function Contact() {
           <h2 className="text-sm font-bold text-primary tracking-widest uppercase mb-4">Get In Touch</h2>
           <h3 className="text-4xl md:text-5xl font-bold mb-8">Start Your SEO Journey Today</h3>
           <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-            Ready to boost your website’s visibility? Reach out for inquiries or to discuss how we can grow your online presence together.
+            Ready to boost your website&apos;s visibility? Reach out for inquiries or to discuss how we can grow your online presence together.
           </p>
 
           <div className="space-y-6">
